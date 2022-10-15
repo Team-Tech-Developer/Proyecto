@@ -1,2 +1,5 @@
 # Proyecto E-commerce
-especificaciones del proyecto
+## Especificaciones del proyecto
+
+Sistema de información que soporte la gestión de una tienda o emprendimiento local y
+mejore los procesos.
