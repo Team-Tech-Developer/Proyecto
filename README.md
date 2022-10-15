@@ -4,4 +4,4 @@
 Sistema de información que soporte la gestión de una tienda o emprendimiento local y
 mejore los procesos.
 
-Rama development
+Rama release
