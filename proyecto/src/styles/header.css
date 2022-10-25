@@ -1,0 +1,13 @@
+.header {
+    background-color: #072227;
+    color: #AEFEFF;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.info{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
