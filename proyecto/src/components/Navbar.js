@@ -1,15 +1,15 @@
-import '../styles/header.css'
+import '../styles/navbar.css'
 
 export function Navbar() {
   return (
-    <nav className="header">
+    <nav className="navbar">
       <div>
         <h2>Computers Web Store</h2></div>
       <ul className="info">
-      <li><div>Page 1</div></li>
-      <li><div>Page 2</div></li>
-      <li><div>Sign Up</div></li>
-      <li><div>Login</div></li>
+      <li><a href='/#' className="pag">Page 1</a></li>
+      <li><a href='/#' className="pag">Page 2</a></li>
+      <li><a href='/#' className="pag">Sign Up</a></li>
+      <li><a href='/#' className="pag">Login</a></li>
     </ul>
     
     </nav>
