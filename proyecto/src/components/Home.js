@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import image1 from "../resourses/products/portatil-dell.jpg";
 import image2 from "../resourses/products/portatil-lenovo.jpg";
 import image3 from "../resourses/products/lenovo-laptop.webp";
 import image4 from "../resourses/products/lenovo-desktop.webp";
+import MetaData from "./layout/MetaData";
+import { useDispatch } from 'react-redux';
+import { getProducts } from "../actions/productAction";
 
 const Home = () => {
+
+  const dispatch = useDispatch();
+  useEffect(()=>{
+    dispatch(getProducts());
+  }, [dispatch])
+
   return (
     <>
-      <h1 id="encabezado_pdts">Sale off</h1>
+    <MetaData title="Cheap and cheerful Computers"></MetaData>
+      <h1 id="encabezado_pdts">Latest products</h1>
       <section id="productos" className="container mt-5">
         <div className="row">
           {/* Producto 1 */}
