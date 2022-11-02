@@ -4,6 +4,7 @@ import image2 from "../resourses/products/portatil-lenovo.jpg";
 import image3 from "../resourses/products/lenovo-laptop.webp";
 import image4 from "../resourses/products/lenovo-desktop.webp";
 import MetaData from "./layout/MetaData";
+import "../styles/Adminhome.css" 
 
 
 const Adminhome = () => {
@@ -37,15 +38,15 @@ const Adminhome = () => {
                 <p className="card-text">$2.500.000</p>
                 <a
                   href="http://localhost:3000"
-                  id="view_btn"
-                  className="btn btn-block"
+                  id="btn"
+                  className="btn btn-info"
                 >
                   Edit
                 </a>
                 <a
                   href="http://localhost:3000"
-                  id="view_btn"
-                  className="btn btn-block"
+                  id="btn"
+                  className="btn btn-danger"
                 >
                  Delete 
                 </a>
@@ -73,15 +74,15 @@ const Adminhome = () => {
                 <p className="card-text">$1.500.000</p>
                 <a
                   href="http://localhost:3000"
-                  id="view_btn"
-                  className="btn btn-block"
+                  id="btn"
+                  className="btn btn-info"
                 >
                   Edit
                 </a>
                 <a
                   href="http://localhost:3000"
-                  id="view_btn"
-                  className="btn btn-block"
+                  id="btn"
+                  className="btn btn-danger"
                 >
                   Delete
                 </a>
@@ -109,15 +110,15 @@ const Adminhome = () => {
                 <p className="card-text">$2.300.000</p>
                 <a
                   href="http://localhost:3000"
-                  id="view_btn"
-                  className="btn btn-block"
+                  id="btn"
+                  className="btn btn-info"
                 >
                   Edit
                 </a>
                 <a
                   href="http://localhost:3000"
-                  id="view_btn"
-                  className="btn btn-block"
+                  id="btn"
+                  className="btn btn-danger"
                 >
                   Delete
                 </a>
@@ -145,15 +146,15 @@ const Adminhome = () => {
                 <p className="card-text">$3.100.000</p>
                 <a
                   href="http://localhost:3000"
-                  id="view_btn"
-                  className="btn btn-block"
+                  id="btn"
+                  className="btn btn-info"
                 >
                   Edit
                 </a>
                 <a
                   href="http://localhost:3000"
-                  id="view_btn"
-                  className="btn btn-block"
+                  id="btn"
+                  className="btn btn-danger"
                 >
                   Delete
                 </a>
