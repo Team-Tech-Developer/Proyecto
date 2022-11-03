@@ -6,6 +6,7 @@ body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  background-color: #DEF5E5;
 }
 
 /* Scroll Bar */
@@ -621,4 +622,237 @@ ul.CTAs a {
 .review_user {
   font-size: 0.8rem;
   color: grey;
+}
+/*------------CARRITO -----------------*/
+
+.carrito{
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 100%;
+  border-radius: 8px;
+  overflow-x: scroll;
+  transition: all 300ms ease-in-out;
+  background-color: white;
+}
+  
+  .carrito h2{
+    text-align: center;
+    font-size: 3rem;
+  }
+  
+  .carrito_center{
+    width: 90%;
+    margin: auto;
+  }
+  
+  .carrito_item{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    width: 100%;
+    margin: 2rem auto;
+    box-shadow: 0 1px 10px #35858B;
+    border-radius: 5px;
+  }
+  
+  .carrito_item div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .carrito_item img{
+    width: 10rem;
+  }
+  
+  .carrito_item h3{
+    margin-top: 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: Helvetica, sans-serif;
+    text-align: justify;
+  }
+  
+  .carrito_item .price{
+    color: #00ABB3;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: start;
+    margin-left: -1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .carrito_item i{
+    fill: #4FBDBA;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: .5rem;
+    
+  }
+  
+  .carrito_item .cantidad{
+    font-size: 2rem;
+    font-weight: bold;
+
+  }
+  
+  .carrito_item .remove_item i{
+    width: 100px;
+    height: 100px;
+    fill: #3C4048;
+    margin-top: 2rem;
+    
+  }
+  
+  .carrito_footer{
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .carrito_footer h3{
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  .carrito_footer .btn{
+    display: inline-block;
+    padding: .3rem 1rem;
+    font-size: 1.2rem;
+    background-color: #4FBDBA;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .carrito_footer .btn:hover{
+    background-color: #AEFEFF;
+    color: #072227;
+  }
+
+/*-------------------------LOGIN------------------------*/
+
+#contenedor {
+  align-items: center;
+  justify-content: center;
+  
+  margin: 0;
+  padding: 5rem;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+}
+
+#central {
+  max-width: 500px;
+  width: 150%;
+}
+
+.titulo {
+  font-size: 250%;
+  color:#000000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#login {
+  width: 100%;
+  padding: 50px 30px;
+  background-color: #BCEAD5;
+  
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+  
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  
+  box-sizing: border-box;
+}
+
+#login input {
+  font-family: 'Overpass', sans-serif;
+  font-size: 110%;
+  color: hwb(0 0% 100%);
+  
+  display: block;
+  width: 100%;
+  height: 40px;
+  
+  margin-bottom: 10px;
+  padding: 5px 5px 5px 10px;
+  
+  box-sizing: border-box;
+  
+  border: none;
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+#login input::placeholder {
+  font-family: 'Overpass', sans-serif;
+  color: #00000070;
+}
+
+#login button {
+  font-family: 'Overpass', sans-serif;
+  font-size: 110%;
+  color:#000000;
+  width: 100%;
+  height: 40px;
+  border: none;
+  
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  
+  background-color: #0f4c75;
+  
+  margin-top: 10px;
+}
+
+#login button:hover {
+  background-color: #0099ff;
+  color:white;
+}
+
+.pie-form {
+  font-size: 90%;
+  text-align: center;    
+  margin-top: 15px;
+}
+
+.pie-form a {
+  display: block;
+  text-decoration: none;
+  color: #0091f1;
+  margin-bottom: 3px;
+}
+
+.pie-form a:hover {
+  color: #0f4c75;
+}
+
+.inferior {
+  margin-top: 10px;
+  font-size: 90%;
+  text-align: center;
+}
+
+.inferior a {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  margin-bottom: 3px;
+}
+
+.inferior a:hover {
+  color: #0099ff;
 }

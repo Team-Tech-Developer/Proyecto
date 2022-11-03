@@ -9,10 +9,10 @@ import { getProducts } from "../actions/productAction";
 
 const Home = () => {
 
-  const dispatch = useDispatch();
+  /*const dispatch = useDispatch();
   useEffect(()=>{
     dispatch(getProducts());
-  }, [dispatch])
+  }, [dispatch])*/
 
   return (
     <>
