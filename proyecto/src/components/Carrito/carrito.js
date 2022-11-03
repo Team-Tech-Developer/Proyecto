@@ -18,7 +18,7 @@ export const Carrito = () => {
                         <i class="fa fa-arrow-down" aria-hidden="true"></i>
                     </div>
                     <div className="remove_item">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
+                        <i class="fa fa-trash  fa-3x" aria-hidden="true"></i>
                     </div>
                 </div> 
 
@@ -34,7 +34,7 @@ export const Carrito = () => {
                         <i class="fa fa-arrow-down" aria-hidden="true"></i>
                     </div>
                     <div className="remove_item">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
+                        <i class="fa fa-trash fa-3x" aria-hidden="true"></i>
                     </div>
                 </div>
 
@@ -50,7 +50,7 @@ export const Carrito = () => {
                         <i class="fa fa-arrow-down" aria-hidden="true"></i>
                     </div>
                     <div className="remove_item">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
+                        <i class="fa fa-trash fa-3x" aria-hidden="true"></i>
                     </div>
                 </div>
                 
