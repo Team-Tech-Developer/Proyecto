@@ -1,3 +1,4 @@
+const product=require("../models/products")
 
 // Ver la lista de productos
 exports.getProducts =(req, res, next) =>{
@@ -8,3 +9,11 @@ exports.getProducts =(req, res, next) =>{
 }
 
 // Crear nuevo producto /api/products
+exports.newProduct = async(req, res, next) =>{
+    const producto= await product.create(req.body);
+
+    res.status(201).json({
+        success:true,
+        producto
+    })
+}

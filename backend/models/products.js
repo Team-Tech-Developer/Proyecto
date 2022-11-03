@@ -13,7 +13,7 @@ const productsShema=mongoose.Schema({
         maxLength:[9, "The product price must be less than 100'000.000"],
         default: 0.0
     },
-    desciption:{
+    description:{
         type:String,
         required:[true,"Please add a description to the product"]
     },
@@ -55,7 +55,7 @@ const productsShema=mongoose.Schema({
         maxLength:[5,"The max stock for the product is 99999"],
         default:0
     },
-    numScore:{
+    numScores:{
         type: Number,
         default: 0
     },
