@@ -14,7 +14,7 @@ const Adminhome = () => {
   return (
     <>
     <MetaData title="Cheap and cheerful Computers"></MetaData>
-      <h1 id="encabezado_pdts">Latest products</h1>
+      <h1 id="encabezado_pdts">Products list</h1>
       <section id="productos" className="container mt-5">
         <div className="row">
           {/* Producto 1 */}

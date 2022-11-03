@@ -1,7 +1,4 @@
-# Proyecto E-commerce
-## Especificaciones del proyecto
+# Proyecto E-commerce Team Tech
 
-Sistema de información que soporte la gestión de una tienda o emprendimiento local y
-mejore los procesos.
-
-Rama development
+Especificaciones del proyecto:
+Sistema de información que soporte la gestión de una tienda o emprendimiento local y mejore los procesos.
