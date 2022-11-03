@@ -45,7 +45,6 @@ export function Navbar() {
           <span className="ml-1" id="cart_count btnl">2</span>
         </Link>
       </div>
-
       {/* <ul className="info">
         <li>
           <a href="/#" className="pag">
