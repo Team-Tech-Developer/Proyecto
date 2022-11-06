@@ -1,0 +1,38 @@
+.navbar {
+    background-color: #072227;
+    color: #AEFEFF;
+}
+
+.inside{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#text {
+    margin: 3%;
+}
+
+.logo {
+    width: 25%;
+}
+
+.btna:hover {
+    background-color: #0f4952;
+}
+
+.btnl {
+    margin-right: 5%;
+    background-color: #82e6e7;
+    border-color: #82e6e7;
+}
+
+.btnl:hover {
+    background-color: #48ccce;
+    border-color: #48ccce;
+}
+
+a:visited, a:active {
+    text-decoration:none;
+    color: #AEFEFF;
+}
