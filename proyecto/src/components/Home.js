@@ -4,15 +4,15 @@ import image2 from "../resourses/products/portatil-lenovo.jpg";
 import image3 from "../resourses/products/lenovo-laptop.webp";
 import image4 from "../resourses/products/lenovo-desktop.webp";
 import MetaData from "./layout/MetaData";
-//import { useDispatch } from 'react-redux';
-//import { getProducts } from "../actions/productAction";
+import { useDispatch } from 'react-redux';
+import { getProducts } from "../actions/productAction";
 
 const Home = () => {
 
-  /*const dispatch = useDispatch();
+  const dispatch = useDispatch();
   useEffect(()=>{
     dispatch(getProducts());
-  }, [dispatch])*/
+  }, [dispatch])
 
   return (
     <>
