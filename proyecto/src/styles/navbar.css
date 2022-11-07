@@ -32,7 +32,7 @@
     border-color: #48ccce;
 }
 
-a:visited, a:active {
+.a, .a:visited, .a:active {
     text-decoration:none;
     color: #AEFEFF;
 }

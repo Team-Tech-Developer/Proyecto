@@ -10,7 +10,7 @@ export function Navbar() {
         <div className="navbar-brand inside">
             <img src={logo} alt="Team Teach Store Logo" className="logo" />
           <Link to="/">
-            <h4 id="text">Team Teach Store</h4>
+            <h4 id="text" className="a">Team Teach Store</h4>
           </Link>
         </div>
       </div>
@@ -42,7 +42,7 @@ export function Navbar() {
         </span>
         <Link to="/Carrito">
           <i className="fa fa-shopping-cart fa-lg text-white" aria-hidden="true"></i>
-          <span className="ml-1" id="cart_count btnl">2</span>
+          <span className="ml-1 a" id="cart_count btnl" >2</span>
         </Link>
       </div>
     
