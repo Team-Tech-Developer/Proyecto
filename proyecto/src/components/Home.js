@@ -27,8 +27,8 @@ const Home = () => {
       {loading ? (
         <>
           <center>
-          <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-          <span class="sr-only">Loading...</span>
+          <i className="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+          <span className="sr-only">Loading...</span>
           <h3>Loading...</h3>
           </center>
         </>

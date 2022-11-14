@@ -1,0 +1,18 @@
+Ejemplo en formato JSON
+{
+        "name": "iPad 9na Gen",
+        "price": 4499990,
+        "description": "15.6' Pulgadas - MD Ryzen 5 - RAM 8GB- Disco SSD 512 GB - Plateado",
+        "score": 4.7,
+        "image": [
+            {
+                "public_id" : "products/dsvbpny402geuwugu20p",
+                "url": "./images/products/apple-ipad.jpg"
+            }
+        ],
+        "category": "tablet",
+        "provider": "Alkosto",
+        "stock": 23,
+        "numScores": 12,
+        "reviews": []
+    }
