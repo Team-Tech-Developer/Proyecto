@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 //import image4 from "../resourses/products/lenovo-desktop.webp";
 import MetaData from "./layout/MetaData";
 import { useDispatch, useSelector } from "react-redux";
-import { getProducts } from "../actions/productAction";
+import { getProducts } from "../actions/productActions";
 import { Link } from "react-router-dom";
 import { useAlert } from "react-alert";
 
@@ -19,7 +19,7 @@ const Home = () => {
       return alert.error(error);
     }
     dispatch(getProducts());
-    alert.success("OK");
+    //alert.success("OK");
   }, [dispatch]);
 
   return (
