@@ -1,8 +1,10 @@
+const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const product = require("../models/products");
+const ErrorHandler = require("../utils/errorHandler");
 const fetch =(url)=>import('node-fetch').then(({default:fetch})=>fetch(url));
 
 // Ver la lista de productos
-exports.getProducts = async (req, res, next) => {
+exports.getProducts =catchAsyncErrors(async (req, res, next) => {
   const products = await product.find();
   if (!products) {
     return res.status(404).json({
@@ -16,27 +18,23 @@ exports.getProducts = async (req, res, next) => {
     total: products.length,
     products,
   });
-};
+});
 
 // Ver un producto por ID
-exports.getProductById = async (req, res, next) => {
+exports.getProductById =catchAsyncErrors( async (req, res, next) => {
   const producto = await product.findById(req.params.id);
   if (!producto) {
-    return res.status(404).json({
-      success: false,
-      message: "Product not found",
-      error: true
-    });
+    return next(new ErrorHandler("Product not found", 404));
   }
   res.status(200).json({
     success: true,
     message: "Here is the info of your product: ",
     producto,
   });
-};
+});
 
 //Update de un producto
-exports.updateProduct = async (req, res, next) => {
+exports.updateProduct =catchAsyncErrors(async (req, res, next) => {
   let producto = await product.findById(req.params.id);
   // Para avisarle al usuario si el objeto no existe
   if (!producto) {
@@ -56,9 +54,9 @@ exports.updateProduct = async (req, res, next) => {
     message: "Product updated successfully",
     producto
   })
-};
+});
 // Eliminar producto
-exports.deleteProduct = async (req, res, next) => {
+exports.deleteProduct =catchAsyncErrors(async (req, res, next) => {
     const producto = await product.findById(req.params.id);
     // Para avisarle al usuario si el objeto no existe
     if (!producto) {
@@ -73,16 +71,16 @@ exports.deleteProduct = async (req, res, next) => {
         success:true,
         message:"Product removed successfully"
     })
-}
+})
 // Crear nuevo producto /api/products
-exports.newProduct = async (req, res, next) => {
+exports.newProduct = catchAsyncErrors(async (req, res, next) => {
   const producto = await product.create(req.body);
 
   res.status(201).json({
     success: true,
     producto,
   });
-};
+});
 
 // uso del FETCH - no se usa solo para consumo
 // ver todos los productos
