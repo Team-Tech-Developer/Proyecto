@@ -29,22 +29,24 @@ export const getProducts = () => async (dispatch) => {
 // Ver detalle del producto
 export const getProductDetails = (id) => async (dispatch) => {
   try {
-    dispatch({ type: PRODUCT_DETAILS_REQUEST });
+      dispatch({ type: PRODUCT_DETAILS_REQUEST })
 
-    const { data } = await axios.get(`api/product/:${id}`);
-    dispatch({ 
-        type: PRODUCT_DETAILS_SUCCESS,
-         payload: data.product });
+      const { data } = await axios.get(`/api/product/${id}`)
+
+      dispatch({
+          type: PRODUCT_DETAILS_SUCCESS,
+          payload: data.producto
+      })
   } catch (error) {
-    dispatch({
-        type: PRODUCT_DETAILS_FAIL,
-        payload: error.data.message
-    })
+      dispatch({
+          type: PRODUCT_DETAILS_FAIL,
+          payload: error.response.data.message
+      })
   }
-};
+}
 
 // Clear error
-export const clearError = () => async(dispatch) =>{
+export const clearErrors = () => async(dispatch) =>{
     dispatch({
         type: CLEAR_ERRORS
     })
