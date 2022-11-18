@@ -3,19 +3,19 @@ const mongoose=require("mongoose");
 const productsShema=mongoose.Schema({
     name: {
         type:String,
-        required:[true, "Please add the name of the product"],
+        required:[true, "Please enter the name of the product"],
         trim:true,
         maxLength:[120,"The product name max length is 120 characters"]
     },
     price:{
         type: Number,
-        required: [true,"Please add the price of the product"],
+        required: [true,"Please enter the price of the product"],
         maxLength:[9, "The product price must be less than 100'000.000"],
         default: 0.0
     },
     description:{
         type:String,
-        required:[true,"Please add a description to the product"]
+        required:[true,"Please enter a description to the product"]
     },
     score:{
         type: Number,
@@ -47,11 +47,11 @@ const productsShema=mongoose.Schema({
     },
     provider:{
         type:String,
-        required:[true, "Please add the product provider"]
+        required:[true, "Please enter the product provider"]
     },
     stock:{
         type: Number,
-        required:[true, "Please add the stock of the product"],
+        required:[true, "Please enter the stock of the product"],
         maxLength:[5,"The max stock for the product is 99999"],
         default:0
     },

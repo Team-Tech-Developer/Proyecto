@@ -7,10 +7,7 @@ const fetch =(url)=>import('node-fetch').then(({default:fetch})=>fetch(url));
 exports.getProducts =catchAsyncErrors(async (req, res, next) => {
   const products = await product.find();
   if (!products) {
-    return res.status(404).json({
-      success:false,
-      error:true
-    })
+    return next(new ErrorHandler("Data not found", 404));
   }
 
   res.status(200).json({
@@ -38,10 +35,7 @@ exports.updateProduct =catchAsyncErrors(async (req, res, next) => {
   let producto = await product.findById(req.params.id);
   // Para avisarle al usuario si el objeto no existe
   if (!producto) {
-    return res.status(404).json({
-      success: false,
-      message: "Product not found",
-    });
+    return next(new ErrorHandler("Product not found", 404));
   }
 // si el objeto existe se ejecuta la actualizacion
   producto = await product.findByIdAndUpdate(req.params.id, req.body, {
@@ -60,10 +54,7 @@ exports.deleteProduct =catchAsyncErrors(async (req, res, next) => {
     const producto = await product.findById(req.params.id);
     // Para avisarle al usuario si el objeto no existe
     if (!producto) {
-      return res.status(404).json({
-        success: false,
-        message: "Product not found",
-      });
+      return next(new ErrorHandler("Product not found", 404));
     }
 
     await producto.remove();
