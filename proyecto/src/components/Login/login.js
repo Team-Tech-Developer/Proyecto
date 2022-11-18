@@ -9,10 +9,9 @@ export const Login = () => {
                     <form id="loginform">
                         <input type="text" name="usuario" placeholder="Usuario" required></input>                 
                         <input type="password" placeholder="Contraseña" name="password" required></input>
-                        <button type="submit" title="Ingresar" name="Ingresar">Login</button>
+                        <button type="submit" title="Ingresar" name="Ingresar" className="btn">Login</button>
                     </form>
                     <div class="pie-form">
-                        <a href="/#">¿Perdiste tu contraseña?</a>
                         <a href="/#">¿No tienes Cuenta? Registrate</a>
                     </div>
                 </div>
