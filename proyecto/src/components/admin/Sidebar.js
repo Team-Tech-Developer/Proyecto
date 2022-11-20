@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const Siderbar = () => {
+export const Sidebar = () => {
   return (
     <div className="sidebar-wrapper">
       <nav id="sidebar">
         <ul className="list-unstyled components">
           <li>
-            <Link to="/admin/dashboard">
+            <Link to="/dashboard">
               <i className="fa fa-tachometer"></i>Administration
             </Link>
           </li>
@@ -24,7 +24,7 @@ export const Siderbar = () => {
                     <Link to="/admin/productList"><i className="fa fa-clipboard"></i>Products List</Link>
                 </li>
                 <li>
-                    <Link to="/"><i className="fa fa-plus"></i>Add Product</Link>
+                    <Link to="/admin/newProduct"><i className="fa fa-plus"></i>Add Product</Link>
                 </li>
             </ul>
           </li>
@@ -48,4 +48,4 @@ export const Siderbar = () => {
   );
 };
 
-export default Siderbar;
+export default Sidebar;

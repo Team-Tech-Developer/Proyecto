@@ -11,6 +11,7 @@ import { ProductDetails } from "./components/products/ProductDetails";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Dashboard } from "./components/admin/Dashboard";
 import { ProductList } from "./components/admin/ProductList";
+import NewProduct from "./components/admin/NewProduct";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             {/*<Route path="/admin" element={<Adminhome/>}/>*/}
             <Route path="/admin/dashboard" element={<Dashboard/>}/>
             <Route path="/admin/productList" element={<ProductList/>}/>
+            <Route path="/admin/newProduct" element={<NewProduct/>}/>
         </Routes>
       </div>
       <Footer />

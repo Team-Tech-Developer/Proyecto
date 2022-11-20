@@ -1,6 +1,6 @@
 import React from "react";
 import MetaData from "../layout/MetaData";
-import Siderbar from "./Siderbar";
+import Siderbar from "./Sidebar";
 import { Link } from "react-router-dom";
 
 export const Dashboard = () => {

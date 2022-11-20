@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../actions/productActions";
 import { useAlert } from "react-alert";
 import MetaData from "../layout/MetaData";
-import Siderbar from "./Siderbar";
+import Siderbar from "./Sidebar";
 import { MDBDataTable } from "mdbreact";
 
 export const ProductList = () => {
