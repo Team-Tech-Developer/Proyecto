@@ -23,7 +23,7 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-    <>
+    <> 
       {loading ? (
         <>
           <center>

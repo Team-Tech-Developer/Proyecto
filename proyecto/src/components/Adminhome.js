@@ -6,11 +6,7 @@ import image4 from "../resourses/products/lenovo-desktop.webp";
 import MetaData from "./layout/MetaData";
 import "../styles/Adminhome.css" 
 
-
 const Adminhome = () => {
-
-  
-
   return (
     <>
     <MetaData title="Cheap and cheerful Computers"></MetaData>
