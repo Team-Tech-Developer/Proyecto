@@ -7,7 +7,7 @@ export const Sidebar = () => {
       <nav id="sidebar">
         <ul className="list-unstyled components">
           <li>
-            <Link to="/dashboard">
+            <Link to="/admin/dashboard">
               <i className="fa fa-tachometer"></i>Administration
             </Link>
           </li>

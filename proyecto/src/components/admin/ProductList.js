@@ -5,6 +5,7 @@ import { useAlert } from "react-alert";
 import MetaData from "../layout/MetaData";
 import Siderbar from "./Sidebar";
 import { MDBDataTable } from "mdbreact";
+import { Link } from "react-router-dom";
 
 export const ProductList = () => {
   const { loading, products, error } = useSelector((state) => state.products);
@@ -42,6 +43,10 @@ export const ProductList = () => {
           field: "provider",
           sort: "asc",
         },
+        {
+          label: 'Actions',
+          field: 'actions',
+      },
       ],
       rows: [],
     };
@@ -54,6 +59,19 @@ export const ProductList = () => {
         price: `$${product.price}`,
         stock: product.stock,
         provider: product.provider,
+        actions: <>
+        <Link to={`/product/${product._id}`} className="btn btn-primary py-1 px-2">
+            <i className="fa fa-eye"></i>
+        </Link><Link to="/" className="btn btn-warning py-1 px-2">
+        <i class="fa fa-pencil"></i>
+        </Link>
+
+        <Link to="/" className="btn btn-danger py-1 px-2">
+            <i className="fa fa-trash"></i>
+        </Link>
+
+
+    </>
       });
     });
     return data;

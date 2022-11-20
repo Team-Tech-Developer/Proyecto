@@ -1,6 +1,7 @@
 const moongose = require("mongoose")
 const validator = require("validator")
 const bcrypt = require("bcryptjs")
+const jwt= require("jsonwebtoken")
 
 const userSchema = new moongose.Schema({
     name:{
@@ -42,12 +43,24 @@ const userSchema = new moongose.Schema({
     resetPasswordToken: String,
     resetPasswordExpire: Date,
 })
-
+// Encripta la contraseña
 userSchema.pre("save", async function(next){
     if(!this.isModified("password")){
         next()
     }
     this.password = await bcrypt.hash(this.password, 10)
 })
+
+// Decodifica las contraseñas y las compara
+userSchema.methods.comparePass = async function (passGiven){
+    return await bcrypt.compare(passGiven, this.password)
+}
+
+// Retornar un JWT token
+userSchema.methods.getJwtToken = function () {
+    return jwt.sign({id: this._id}, process.env.JWT_SECRET,{
+        expiresIn: process.env.JWT_EXPIRES_TIME
+    })
+}
 
 module.exports = moongose.model("auth",userSchema)
