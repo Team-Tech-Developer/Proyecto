@@ -2,8 +2,10 @@ import React from "react";
 import "../../styles/navbar.css";
 import logo from "../../resourses/logoTeam.jpeg";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-export function Navbar() {
+export const Navbar = () => {
+
   return (
     <nav className="navbar row">
       <div className="col-12 col-md-3">
@@ -69,15 +71,8 @@ export function Navbar() {
             </div>
         </div>
 
-        <Link to="/Carrito">
-          <i
-            className="fa fa-shopping-cart fa-lg text-white"
-            aria-hidden="true"
-          ></i>
-          <span className="ml-1 a" id="cart_count btnl">
-            2
-          </span>
-        </Link>
+          <Link to="/Cart"><i className="fa fa-shopping-cart fa-lg text-white" aria-hidden="true"></i>
+          <span className="ml-1 a" id="cart_count btnl">2</span></Link>
       </div>
     </nav>
   );

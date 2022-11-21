@@ -39,11 +39,11 @@ export const Cart = () => {
     return (
         <Fragment>
             <MetaData title={'Mi carrito'} />
-            
+
             {cartItems.length === 0 ? <h2 className="mt-5">Su carrito esta vacio</h2> : (
                 <Fragment>
                     
-                    <h2 className="mt-5">Su Carrito: <b>{cartItems.reduce((acc, item)=>(acc+Number(item.quantity)),0)} items</b></h2>
+                    <h2 className="mt-5">Su Carrito: <b>{cartItems.reduce((acc, item)=>(acc+Number(item.quantity)),0)} Ítems</b></h2>
 
                     <div className="row d-flex justify-content-between">
                         <div className="col-12 col-lg-8">
@@ -93,8 +93,8 @@ export const Cart = () => {
                             <div id="order_summary">
                                 <h4>Total de la Compra</h4>
                                 <hr />
-                                <p>Productos:  <span className="order-summary-values">{cartItems.reduce((acc, item)=>(acc+Number(item.quantity)),0)} (Unidades)</span></p>
-                                <p>Est. total: <span className="order-summary-values">${cartItems.reduce((acc, item)=> acc+(item.quantity*item.precio),0).toFixed(2)}</span></p>
+                                <p>Productos:  <span className="order-summary-values">{cartItems.reduce((acc, item)=>(acc+Number(item.quantity)),0)} Unidades</span></p>
+                                <p>Total: <span className="order-summary-values">${cartItems.reduce((acc, item)=> acc+(item.quantity*item.precio),0).toFixed(2)}</span></p>
 
                                 <hr />
                                 <button id="checkout_btn" className="btn btn-primary btn-block" onClick={checkOutHandler}>Comprar!</button>
