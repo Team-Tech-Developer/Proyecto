@@ -126,3 +126,99 @@ exports.resetPassword = catchAsyncErrors(async (req, res, next)=>{
     tokenEnviado(user, 200, res)
 
 })
+
+// Ver perfil de usuario
+exports.getUserProfile = catchAsyncErrors( async (req, res, next) =>{
+    const user= await User.findById(req.user.id);
+
+    res.status(200).json({
+        success:true,
+        user
+    })
+})
+
+// Update contraseña (usuario logeado)
+exports.updatePassword= catchAsyncErrors( async(req, res, next) =>{
+    const user = await User.findById(req.user.id).select("+password")
+
+    // Revisar si la contraseña vieja es igual a la nueva
+    const areEquals = await user.comparePass(req.body.oldPassword)
+
+    if(!areEquals){
+        return next(new ErrorHandler("La contraseña actual no es correcta",401))
+    }
+
+    user.password= req.body.newPassword;
+    await user.save();
+
+    tokenEnviado(user, 200, res);
+})
+
+// Update perfil de usuario (logeado)
+exports.updateProfile = catchAsyncErrors(async(req, res, next) =>{
+    // Actualizar el email por user a decision de cada uno
+    const newData = {
+        name: req.body.name,
+        email: req.body.email,
+    }
+
+    // update avatar: pendiente
+    const user = await User.findByIdAndUpdate(req.user.id, newData, {
+        new:true,
+        runValidators:true,
+        useFindAndModify: false
+    })
+
+    res.status(200).json({
+        success: true,
+        user
+    })
+})
+
+// Servicios controladores sobre usuarios por parte del los administradores
+
+// Ver todos los usuarios
+exports.getAllUsers= catchAsyncErrors( async (req, res, next) =>{
+    const users = await User.find();
+    if(!users){
+        return next(new ErrorHandler("Data not found", 404));
+    }
+    res.status(200).json({
+        success: true,
+        users
+    })
+})
+
+// Ver el detalle de un usuario
+exports.getUserDetails= catchAsyncErrors(async (req, res, next) =>{
+    const user = await User.findById(req.params.id);
+
+    if(!user){
+        return next(new ErrorHandler(`User with id ${req.params.id} not found`))
+    }
+    
+    res.status(200).json({
+        success: true,
+        user
+    })
+})
+
+// Actualizar perfil de usuario (como admin)
+exports.updateUser =  catchAsyncErrors( async (req, res, next) =>{
+    const newData ={
+        name: req.body.name,
+        email: req.body.email,
+        role: req.body.role
+    }
+
+    const user = await User.findByIdAndUpdate(req.params.id, newData,{
+        new: true,
+        runValidators: true,
+        useFindAndModify: false
+    })
+
+    res.status(200).json({
+        success: true,
+        user
+    })
+})
