@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { getProductDetails, clearErrors } from "../../actions/productActions";
 import { useAlert } from "react-alert";
 import { Carousel } from "react-bootstrap";
+import { addItemToCart } from "../../actions/cartActions";
 
 export const ProductDetails = () => {
   const { loading, product, error } = useSelector(
@@ -39,6 +40,11 @@ export const ProductDetails = () => {
 
     const qty = contador.valueAsNumber-1;
     setQuantity(qty)
+  }
+
+  const addToCart = () => {
+    dispatch(addItemToCart(id, quantity));
+    alert.success("¡Tu producto ha sido agregado al carrito de compras!")
   }
 
   return (
@@ -98,7 +104,7 @@ export const ProductDetails = () => {
                 type="button"
                 id="carrito_btn"
                 className="btn btn-primary d-inline ml-4"
-                disabled={product.stock === 0}
+                disabled={product.stock === 0} onClick={addToCart}
               >
                 Add to Cart
               </button>

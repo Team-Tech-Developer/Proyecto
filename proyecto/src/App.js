@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import { Navbar } from "./components/layout/Navbar";
 import "./styles/App.css";
 //import Adminhome from "./components/Adminhome"
-import Cart from "./components/cart/Cart"
+import { Cart } from "./components/cart/Cart"
 import { Login } from "./components/Login/login"
 import { ProductDetails } from "./components/products/ProductDetails";
 // Router traido desde react-router-dom (no confundir con el de express)
@@ -22,7 +22,7 @@ function App() {
             <Route path="/" element={<Home/>}/>
             <Route path="/product/:id" element={<ProductDetails/>}/>
             <Route path="/home" element={<Home/>}/>
-            <Route path="/Carrito" element={<Cart />}/>
+            <Route path="/ShoppingCart" element={<Cart />}/>
             <Route path="/Login" element={<Login />}/>
             {/*<Route path="/admin" element={<Adminhome/>}/>*/}
             <Route path="/admin/dashboard" element={<Dashboard/>}/>

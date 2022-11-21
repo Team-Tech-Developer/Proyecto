@@ -5,7 +5,7 @@ import { addItemToCart, removeItemFromCart } from '../../actions/cartActions'
 import MetaData from '../layout/MetaData'
 
 
-const Cart = () => {
+export const Cart = () => {
     const navigate=useNavigate()
     const dispatch= useDispatch();
     const {cartItems} = useSelector(state => state.cart)
@@ -40,7 +40,6 @@ const Cart = () => {
         <Fragment>
             <MetaData title={'Mi carrito'} />
             
-
             {cartItems.length === 0 ? <h2 className="mt-5">Su carrito esta vacio</h2> : (
                 <Fragment>
                     
@@ -107,5 +106,3 @@ const Cart = () => {
         </Fragment>
     )
 }
-
-export default Cart
