@@ -2,7 +2,6 @@ const moongose = require("mongoose")
 const validator = require("validator")
 const bcrypt = require("bcryptjs")
 const jwt= require("jsonwebtoken")
-const crypto = require("crypto") 
 
 const userSchema = new moongose.Schema({
     name:{
@@ -40,6 +39,7 @@ const userSchema = new moongose.Schema({
         type:Date,
         default: Date.now
     },
+
     resetPasswordToken: String,
     resetPasswordExpire: Date,
 })
@@ -63,17 +63,4 @@ userSchema.methods.getJwtToken = function () {
     })
 }
 
-// Generar un token ára reset de contraseña
-userSchema.methods.genResetPasswordToken= function (){
-    const resetToken =crypto.randomBytes(20).toString("hex")
-
-    // Hashear y resetToken
-    this.resetPasswordToken= crypto.createHash("sha256").update(resetToken).digest("hex")
-
-
-    // Setear fecha de expiracion del token
-    this.resetPasswordExpire= Date.now() + 30*60*1000 // El token dura 30 min (1'800'000 milisegundos)
-
-    return resetToken;
-}
 module.exports = moongose.model("auth",userSchema)

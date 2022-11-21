@@ -1,36 +1,40 @@
-import React, {Fragment} from "react";
+import React, { Fragment} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import { addItemToCart, removeItemFromCart } from '../../actions/cartActions'
 import MetaData from '../layout/MetaData'
 
-export const Cart = () => {
 
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
-    const {cartItems} = useSelector (state => state.cart)
-    const {user} = useSelector(state => state.auth)
+const Cart = () => {
+    const navigate=useNavigate()
+    const dispatch= useDispatch();
+    const {cartItems} = useSelector(state => state.cart)
+    const {user} =useSelector(state => state.auth)
+
     const increaseQty = (id, quantity, inventario) => {
-        const newQty  = quantity+1;
+        const newQty = quantity+1;
         if (newQty > inventario) return;
         dispatch(addItemToCart(id, newQty))
-    }
-    const decreaseQty = (id, quantity) => {
+     }
+  
+     const decreaseQty = (id, quantity) => {
         const newQty = quantity-1;
         if (newQty <= 0) return;
         dispatch(addItemToCart(id, newQty))
-    }
-    const checkOutHandler = () => {
+   }
+
+   const checkOutHandler = () =>{
         if (user){
             navigate("/shipping")
         }
-        else{ 
+        else{
             navigate("/login")
         }
-    }
-    const removeCartItemHandler = (id) => {
-        dispatch(removeItemFromCart(id))
-    }
+   }
+
+   const removeCartItemHandler= (id)=>{
+    dispatch(removeItemFromCart(id))
+   }
 
     return (
         <Fragment>

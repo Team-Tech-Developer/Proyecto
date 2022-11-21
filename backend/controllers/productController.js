@@ -65,7 +65,6 @@ exports.deleteProduct =catchAsyncErrors(async (req, res, next) => {
 })
 // Crear nuevo producto /api/products
 exports.newProduct = catchAsyncErrors(async (req, res, next) => {
-  req.body.user=req.user.id;
   const producto = await product.create(req.body);
 
   res.status(201).json({
