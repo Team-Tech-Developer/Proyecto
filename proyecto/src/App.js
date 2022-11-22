@@ -3,8 +3,8 @@ import { Footer } from "./components/layout/Footer";
 import Home from "./components/Home";
 import { Navbar } from "./components/layout/Navbar";
 import "./styles/App.css";
-//import Adminhome from "./components/Adminhome"
-import { Cart } from "./components/cart/Cart"
+import Adminhome from "./components/Adminhome"
+import { Cart } from "./components/Cart/cart"
 import { Login } from "./components/Login/login"
 import { ProductDetails } from "./components/products/ProductDetails";
 // Router traido desde react-router-dom (no confundir con el de express)

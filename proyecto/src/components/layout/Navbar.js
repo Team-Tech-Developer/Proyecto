@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/navbar.css";
 import logo from "../../resourses/logoTeam.jpeg";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+//import { useSelector } from "react-redux";
 
 export const Navbar = () => {
 

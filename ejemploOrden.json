@@ -1,0 +1,25 @@
+{
+  "priceItems": 2500000,
+  "priceTax": 0.19,
+  "priceSend": 70000,
+  "priceTotal": 3045000,
+  "items": [
+    {
+      "product": "63686999a6fb5c3f25b4885b",
+      "name": "Portátil Dell Vostro 3400",
+      "price": 2500000,
+      "image": "./images/products/portatil-dell.jpg",
+      "quantity": 1
+    }
+  ],
+  "sendInfo": {
+    "direction": "Gran Colombia No. 12",
+    "city": "Cúcuta",
+    "phone": 5555551234,
+    "departament": "Norte de Santander"
+  },
+  "paymentInfo": { 
+    "id": "pi_1HrMVNAlHMiRMt8E1BguvVIo",
+    "state": "success" 
+}
+}

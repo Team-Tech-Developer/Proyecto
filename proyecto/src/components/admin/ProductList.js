@@ -63,7 +63,7 @@ export const ProductList = () => {
         <Link to={`/product/${product._id}`} className="btn btn-primary py-1 px-2">
             <i className="fa fa-eye"></i>
         </Link><Link to="/" className="btn btn-warning py-1 px-2">
-        <i class="fa fa-pencil"></i>
+        <i className="fa fa-pencil"></i>
         </Link>
 
         <Link to="/" className="btn btn-danger py-1 px-2">
