@@ -53,7 +53,7 @@ const orderSchema = mongoose.Schema({
     id:{
         type:String
     },
-    state:{
+    status:{
         type:String
     }
   },
@@ -80,7 +80,7 @@ const orderSchema = mongoose.Schema({
     required:true,
     default: 0.0
   },
-  state:{
+  status:{
     type:String,
     required:true,
     default: "processing"

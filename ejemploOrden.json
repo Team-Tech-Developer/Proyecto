@@ -20,6 +20,6 @@
   },
   "paymentInfo": { 
     "id": "pi_1HrMVNAlHMiRMt8E1BguvVIo",
-    "state": "success" 
+    "status": "success" 
 }
 }
