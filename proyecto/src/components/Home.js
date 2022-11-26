@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <> 
-      {loading ? (
+      {loading ? 
         <>
           <center>
           <i className="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
@@ -32,7 +32,7 @@ const Home = () => {
           <h3>Loading...</h3>
           </center>
         </>
-      ) : (
+      : (
         <>
           <MetaData title="Cheap and cheerful computers"></MetaData>
           <h1 id="encabezado_pdts">Latest products</h1>
